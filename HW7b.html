@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HW7b</title>
+</head>
+
+<body>
+    <h3>Homework assignment 7b</h3>
+
+
+
+
+    <script>
+        function startProcess() {
+
+            var i = 0;
+
+            while (i < 10) {
+
+                var length = i + 2;
+                var width = i + 1;
+                var height = i + 2;
+                var myvolume = getVolume(length, width, height);
+                var volumeSize;
+
+
+                if (myvolume >= 60 && myvolume <= 70) {
+                    volumeSize = 'Small';
+                }
+
+                else if (myvolume >= 71 && myvolume <= 80) {
+                    volumeSize = "Medium";
+                }
+                else if (myvolume >= 81 && myvolume <= 90) {
+                    volumeSize = "Large";
+                }
+                else if (myvolume >= 91 && myvolume <= 100) {
+                    volumeSize = "Extra Large";
+                }
+
+                else {
+                    volumeSize = "Other Volume";
+                }
+
+
+                switch (volumeSize) {
+                    case 'Small':
+                        msg = "You have a Small Volume " + myvolume;
+                        break;
+                    case 'Medium':
+                        msg = "You have a Medium Volume " + myvolume;
+                        break;
+                    case 'Large':
+                        msg = "You have a Large Volume " + myvolume;
+                        break;
+                    case 'Extra Large':
+                        msg = "You have an Extra Large Volume " + myvolume;
+                        break;
+                    default:
+                        msg = "You have an Odd Volume " + myvolume;
+                        break;
+                }
+
+                document.write(msg + "<br/>");
+                i++
+
+
+            }
+        }
+
+        function getVolume(l, w, h) {
+            var result = l * w * h;
+            return result
+        }
+
+
+        startProcess()
+            ;
+
+
+
+
+    </script>
+</body>
+</html>
